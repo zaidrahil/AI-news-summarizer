@@ -508,7 +508,7 @@ const SummarizePage = ({ onSummarize }: { onSummarize: (result: SummaryResult) =
       });
 
       if (allUrlsToFetch.length === 0) {
-        throw new Error("Please enter at least one valid URL starting with http:// or https://");
+        throw new Error("Please enter at least one valid URL starting with http:// or https://");  
       }
 
       const fetchTasks = allUrlsToFetch.map(async (url) => {
