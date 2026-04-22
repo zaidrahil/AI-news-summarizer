@@ -432,7 +432,7 @@ async function startServer() {
       const statusCode = isRetryableGeminiError(error) ? 503 : (getGeminiErrorStatus(error) || 500);
       const message = statusCode === 503
         ? "AI service is temporarily unavailable. Please try again in a moment."
-        : "Failed to get summary but not network issue.";
+        : "Failed to get summary due to  network issue.";
       res.status(statusCode).json({ error: message, details: error.message });
     }
   });
